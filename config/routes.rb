@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Retailer resource:
+  # CREATE
+  get "/retailers/new", :controller => "retailers", :action => "new"
+  post "/create_retailer", :controller => "retailers", :action => "create"
+
+  # READ
+  get "/retailers", :controller => "retailers", :action => "index"
+  get "/retailers/:id", :controller => "retailers", :action => "show"
+
+  # UPDATE
+  get "/retailers/:id/edit", :controller => "retailers", :action => "edit"
+  post "/update_retailer/:id", :controller => "retailers", :action => "update"
+
+  # DELETE
+  get "/delete_retailer/:id", :controller => "retailers", :action => "destroy"
+  #------------------------------
+
   root to: "giftcards#index"
 
   # Routes for the Giftcard resource:

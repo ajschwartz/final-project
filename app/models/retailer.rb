@@ -1,4 +1,4 @@
-class Giver < ActiveRecord::Base
+class Retailer < ActiveRecord::Base
 
 validates :name, :presence => true, :uniqueness => true
 
